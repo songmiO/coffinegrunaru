@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #333333;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Noto Sans', 'Noto Sans KR', sans-serif; 
+    line-height: 20px;
+    margin: 0;
+    padding: 35px 100px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+ 
+.menu-title {
+    padding: 62px;
+    font-size: 55px;
+}
+
+.menu-category {
+    margin: 59.76px 0px 72px;
+}
+
+.menu-category a {
+    text-decoration: none;
+}
+
+.menu-list {
+    margin-right: 15px;
+}
+
+.menu-list:hover {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 15px;
+    background-color: #222222;
+}
+
+.menu-list {
+    color: #222222;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu-list:hover {
+    color: #eeeeee;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.section-banner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* coffee */
+.coffee-banner {
+    width: 50%;
+    height: auto;
+    background: url('image/coffee-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.coffee-banner-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.coffee-content-wrap {
+    padding: 18px 65px;
+}
+
+.coffee-banner-title {
+    color: #705682;
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.banner-title {
+    margin-bottom: 12px;
+}
+
+.coffee-title-underline {
+    width: 50px;
+    border-top: 2px solid #705682;
+}
+
+.coffee-banner-content {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content {
+    margin-top: 18px;
+}
+
+.coffee-img img {
+    padding: 31px 101px;
+}
+
+.coffee-next-btn a i {
+   width: 25px;
+   height: 25px;
+}
+
+.coffee-next-btn,.wine-next-btn img:hover  {
+    cursor: pointer;
+}
+
+/* wine */
+.wine-banner {
+    width: 50%;
+    height: auto;
+    background: url('image/wine-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.wine-banner-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+
+.wine-content-wrap {
+    padding: 18px 45px;
+}
+
+.wine-banner-title {
+    color: #cd8871;
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.wine-title-underline {
+    width: 50px;
+    border-top: 2px solid #cd8871;
+}
+
+.wine-banner-content {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.wine-img {
+    padding: 39px 130px;
+}
+
+.wine-img img {
+    width: 450px;
+    height: 450px;
+}
+
+.wine-next-btn img:hover {
+    cursor: pointer;
+}
+
+.online-title {
+    color: #6444a6;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.online-store-setction {
+    max-width: 100%;
+    background: url('image/online-store-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1920px;
+    height: 800px;
+}
+
+.online-store-title-wrap {
+    padding: 97px 348px;
+}
+
+.online-store-title-wrap p {
+    color: #613ca1;
+    font-size: 28px;
+    margin-bottom: 30px
+}
+
+.online-store-title-wrap a {
+    padding: 15px 30px;
+    border: 1px solid #613ca1;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #613ca1;
+}
+
+.online-store-img {
+    padding: 25px;
+}
+
+@keyframes vibration {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(-1deg);
+    }
+  }  
+
+.online-store-title-wrap img {
+    padding: 0px 1090px;
+    animation: vibration 1s infinite;
+}
+
+/* 반응형 */
+@media screen and (min-width:576px) {
+	/* 스마트폰 가로 */
+}
+
+@media screen and (min-width:768px) {
+	/* 타블렛 */
+}
+@media screen and (max-width:992px) {
+	/* 데스크탑 */
+}
+
+@media screen and (max-width:1200px) {
+	/* 큰 데스크탑 */
+    .coffee-banner-title {
+        font-size: 33px;
+    }
+    .coffee-banner-content {
+        display: none;
+    }
+    .wine-banner-title {
+        font-size: 33px;
+    }
+    .wine-banner-content {
+        display: none;
+    }
+
+}

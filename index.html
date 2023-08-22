@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flipster Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=550, initial-scale=1">
+
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="jquery.flipster.min.css">
+
+	<!-- jQuery -->
+    <script src="jquery.flipster.min.css"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="my-flipster">
+        <ul>
+          <li><img src="" /></li>
+          <li><p>Plain ol' <abbr>HTML</abbr>!</p></li>
+          ...
+        </ul>
+      </div>
+
+<article id="demo-default" class="demo">
+
+    <h2>Default Settings (Coverflow)</h2>
+
+    <div id="coverflow">
+        <ul class="flip-items">
+            <li data-flip-title="Red">
+                <img src="text1.gif">
+            </li>
+            <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+                <img src="text2.gif">
+             </li>
+            <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+                <img src="text3.gif">
+            </li>
+            <li data-flip-title="Daisy Bush" data-flip-category="Purples">
+                <img src="text4.gif">
+            </li>
+            <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
+                <img src="text5.gif">
+            </li>
+            <li data-flip-title="Dodger Blue" data-flip-category="Blues">
+                <img src="text6.gif">
+            </li>
+            <li data-flip-title="Cyan" data-flip-category="Blues">
+                <img src="text7.gif">
+            </li>
+            <li data-flip-title="Robin's Egg" data-flip-category="Blues">
+                <img src="text8.gif">
+            </li>
+            <li data-flip-title="Deep Sea" data-flip-category="Greens">
+                <img src="text9.gif">
+            </li>
+            <li data-flip-title="Apple" data-flip-category="Greens">
+                <img src="text10.gif">
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var coverflow = $("#coverflow").flipster();
+
+        var options = {
+			start: 0,
+			fadeIn: 400,
+			loop: true,
+			buttonPrev: 'Previous',
+			buttonNext: 'Next',
+			style: 'carousel',
+			spacing: -0.6,
+			nav: false,
+			buttons:   true
+     };
+
+    $('.my-flipster').flipster(options);
+    </script>
+
+</article>
+
+
+
+</body>
+</html>
