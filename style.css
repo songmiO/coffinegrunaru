@@ -7,6 +7,11 @@ body {
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 article {
     margin: 0;
     padding: 0;
@@ -64,7 +69,8 @@ article {
 
 .section-banner {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* coffee */
@@ -73,7 +79,7 @@ article {
     height: auto;
     background: url('image/coffee-banner.jpg');
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: 100% 100%; 
 }
 
 .coffee-banner-wrap {
@@ -82,8 +88,17 @@ article {
     justify-content: flex-start;
 }
 
-.coffee-content-wrap {
-    padding: 18px 65px;
+.coffee-banner-inner {
+    width: 50%;
+}
+
+.coffee-banner-inner a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.coffee-content1 {
+    margin: 8px 0 0 35px;
 }
 
 .coffee-banner-title {
@@ -93,12 +108,16 @@ article {
 }
 
 .banner-title {
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 .coffee-title-underline {
-    width: 50px;
+    width: 40px;
     border-top: 2px solid #705682;
+}
+
+.coffee-content2 {
+    margin-left: 35px;
 }
 
 .coffee-banner-content {
@@ -107,11 +126,16 @@ article {
 }
 
 .content {
-    margin-top: 18px;
+    margin-top: 9px;
+}
+
+.coffee-img {
+    width: 50%;
+    padding: 44px 0px 0px 53px;
 }
 
 .coffee-img img {
-    padding: 31px 101px;
+    width: 90%;
 }
 
 .coffee-next-btn a i {
@@ -129,7 +153,7 @@ article {
     height: auto;
     background: url('image/wine-banner.jpg');
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: 100% 100%; 
 }
 
 .wine-banner-wrap {
@@ -139,8 +163,17 @@ article {
 }
 
 
-.wine-content-wrap {
-    padding: 18px 45px;
+.wine-banner-inner {
+    width: 50%;
+}
+
+.wine-banner-inner a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.wine-content1 {
+    margin: 8px 0 0 35px;
 }
 
 .wine-banner-title {
@@ -150,8 +183,12 @@ article {
 }
 
 .wine-title-underline {
-    width: 50px;
+    width: 40px;
     border-top: 2px solid #cd8871;
+}
+
+.wine-content2 {
+    margin-left: 35px;
 }
 
 .wine-banner-content {
@@ -160,12 +197,12 @@ article {
 }
 
 .wine-img {
-    padding: 39px 130px;
+    width: 50%;
+    padding: 20px 0 0 20px;
 }
 
 .wine-img img {
-    width: 450px;
-    height: 450px;
+  width: 90%;
 }
 
 .wine-next-btn img:hover {
@@ -224,30 +261,308 @@ article {
 }
 
 /* 반응형 */
-@media screen and (min-width:576px) {
-	/* 스마트폰 가로 */
-}
-
-@media screen and (min-width:768px) {
-	/* 타블렛 */
-}
-@media screen and (max-width:992px) {
-	/* 데스크탑 */
-}
-
-@media screen and (max-width:1200px) {
-	/* 큰 데스크탑 */
+@media screen and (max-width:1500px) {
+	/* 와이드형 데스크탑 */
+    /* 커피 */
     .coffee-banner-title {
         font-size: 33px;
     }
-    .coffee-banner-content {
-        display: none;
+
+    .coffee-title-underline {
+        width: 35px;
     }
+
+    .coffee-banner-content {
+        font-size: 14px;
+    }
+
+    /* 와인 */
     .wine-banner-title {
         font-size: 33px;
     }
+
+    .wine-title-underline {
+        width: 35px;
+    }
+
+    .wine-banner-content {
+        font-size: 14px;
+    }
+
+    /* 온라인스토어 배너 */
+    .online-store-title-wrap {
+        padding: 101px 287px;
+    }
+
+    .online-title {
+        font-size: 55px;
+    }
+
+    .online-store-title-wrap p {
+        font-size: 20px;
+    }
+
+    .online-store-title-wrap a {
+        font-size: 11px;
+        padding: 14px 29px; 
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+	/* 데스크탑 */
+    /* 커피 */
+    .coffee-banner-title {
+        font-size: 33px;
+    }
+
+    .coffee-title-underline {
+        width: 35px;
+    }
+
+    .coffee-banner-content {
+        display: none;
+    }
+
+    /* 와인 */
+    .wine-banner-title {
+        font-size: 33px;
+    }
+
+    .wine-title-underline {
+        width: 35px;
+    }
+
     .wine-banner-content {
         display: none;
     }
 
+    /* 온라인스토어 배너 */
+    .online-store-title-wrap {
+        padding: 83px 219px;
+    }
+
+    .online-title {
+        font-size: 45px;
+    }
+
+    .online-store-title-wrap p {
+        font-size: 18px;
+        margin-bottom: 19px;
+    }
+
+    .online-store-title-wrap a {
+        font-size: 11px;
+        padding: 12px 25px; 
+    }
+
 }
+
+@media screen and (max-width:992px) {
+	/* 타블렛 */
+    /* BEST */
+    .menu-title {
+        padding: 43px;
+        font-size: 38px;
+    }
+    
+    .menu-category {
+        margin: 46.76px 0px 72px;
+    }
+
+    .menu-category a {
+        font-size: 15px;
+    }
+
+    /* 커피 */
+    .coffee-banner {
+        width: 100%;
+    }
+
+    .coffee-banner-title {
+        font-size: 40px;
+    }
+    
+    .coffee-title-underline {
+        width: 25px;
+    }
+
+    .coffee-content1 {
+        margin: 8px 0 0 26px;
+    }
+
+    /* 와인 */
+    .wine-banner {
+        width: 100%;
+    }
+
+    .wine-banner-title {
+        font-size: 40px;
+    }
+
+    .wine-title-underline {
+        width: 25px;
+    }
+    
+    .wine-content1 {
+        margin: 8px 0 0 26px;
+    }
+
+    /* 온라인스토어 배너 */
+    .online-store-setction {
+        max-width: 100%;
+        background: url('image/online-store-banner-moblie.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 1920px;
+        height: 800px;
+    }
+
+    .online-store-title-wrap {
+        padding: 153px 260px;
+    }
+
+    .online-title {
+        font-size: 39px;
+    }
+
+    .online-store-title-wrap p {
+        font-size: 15px;
+        margin-bottom: 19px;
+    }
+
+    .online-store-title-wrap a {
+        font-size: 11px;
+        padding: 11px 23px; 
+    }
+}
+
+@media screen and (max-width:768px) {
+	/* 스마트폰 가로 */
+    /* BEST */
+    .menu-title {
+        padding: 28px;
+        font-size: 29px;
+    }
+    
+    .menu-category {
+        margin: 26.76px 0px 72px;
+    }
+
+    /* 커피 */
+    .coffee-banner-title {
+        font-size: 35px;
+    }
+    
+    .coffee-title-underline {
+        width: 15px;
+    }
+
+    .coffee-content1 {
+        margin: 8px 0 0 26px;
+    }
+
+    /* 와인 */
+    .wine-banner-title {
+        font-size: 35px;
+    }
+
+    .wine-title-underline {
+        width: 15px;
+    }
+    
+    .wine-content1 {
+        margin: 8px 0 0 26px;
+    }
+
+    /* 온라인스토어 배너 */
+    .online-store-title-wrap {
+        padding: 17px 147px;
+    }
+    
+    .online-title {
+        font-size: 35px;
+    }
+
+    .online-store-title-wrap p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .online-store-title-wrap a {
+        font-size: 9px;
+        padding: 9px 16px;
+    }
+
+    .online-store-title-wrap a:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:576px) {
+	/* 스마트폰 */
+    /* BEST */
+    .menu-title {
+        padding: 24px;
+        font-size: 19px;
+    }
+
+    .menu-category {
+        margin: 21.76px 0px 72px;
+    }
+
+    .menu-category a {
+        font-size: 11px;
+    }
+
+    /* 커피 */
+    .coffee-banner-title {
+        font-size: 25px;
+    }
+        
+    .coffee-title-underline {
+        width: 15px;
+    }
+    
+    .coffee-content1 {
+        margin: 8px 0 0 26px;
+    }
+    
+    /* 와인 */
+    .wine-banner-title {
+        font-size: 25px;
+    }
+    
+    .wine-title-underline {
+        width: 15px;
+    }
+        
+    .wine-content1 {
+        margin: 8px 0 0 26px;
+    }
+
+    /* 온라인스토어 배너 */
+    .online-store-title-wrap {
+        padding: 54px 155px;
+    }
+        
+    .online-title {
+        font-size: 30px;
+    }
+    
+    .online-store-title-wrap p {
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .online-store-title-wrap a {
+        font-size: 7px;
+        padding: 8px 13px;
+    }
+}
+
+
+
+
+
+

@@ -7,11 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- 롤링슬라이드 css -->
     <link rel="stylesheet" href="jquery.flipster.min.css">
+    <!-- AOS 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<!-- jQuery -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="jquery.flipster.min.js"></script>
+
+    <!-- JS -->
+    <script src="AOS.js"></script>
 </head>
 <body>
 
@@ -56,43 +63,45 @@
     <div class="coffee-banner">
         
        <div class="coffee-banner-wrap">
-        <div class="coffee-content-wrap">
-            <h3 class="coffee-banner-title">COFFINE'S</h3>
-            <h3 class="coffee-banner-title banner-title">COFFEE</h3>
-            <div class="coffee-title-underline"></div>
-            <p class="coffee-banner-content content">최적의 로스팅 기법으로</p>
-            <p class="coffee-banner-content"> 언제 어디서나 조화로운 커피</p>
+        <div class="coffee-banner-inner">
+            <a href="/">
+                <div class="coffee-content1">
+                    <h3 class="coffee-banner-title">COFFINE'S</h3>
+                    <h3 class="coffee-banner-title banner-title">COFFEE</h3>
+                    <div class="coffee-title-underline"></div>
+                </div>
+                <div class="coffee-content2">
+                    <p class="coffee-banner-content content">최적의 로스팅 기법으로</p>
+                    <p class="coffee-banner-content"> 언제 어디서나 조화로운 커피&nbsp;&nbsp;&gt;</p>
+                </div>
+            </a>
           </div>
-          <div class="coffee-img col-md-6 fade-in">
+          <div class="coffee-img" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="top-center">
               <img src="image/coffee-img.png" alt="Coffee">
           </div>
        </div>
-          <!-- <div class="coffee-next-btn">
-              <a href="/">
-                  <img src="image/next.png" alt="Next Button">
-              </a>
-          </div>   -->
       </div>
 
       <!-- 와인 배너 -->
       <div class="wine-banner">
 
         <div class="wine-banner-wrap">
-            <div class="wine-content-wrap">
-                <h3 class="wine-banner-title">COFFINE'S</h3>
-                <h3 class="wine-banner-title banner-title">WINE</h3>
-                <div class="wine-title-underline"></div>
-                <p class="wine-banner-content content">최상의 향과 맛을 담은 와인</p>   
-              </div> 
-              <div class="wine-img">
+            <div class="wine-banner-inner">
+                <a href="/">
+                    <div class="wine-content1">
+                        <h3 class="wine-banner-title">COFFINE'S</h3>
+                        <h3 class="wine-banner-title banner-title">WINE</h3>
+                        <div class="wine-title-underline"></div>
+                    </div>
+                   <div class="wine-content2">
+                        <p class="wine-banner-content content">최상의 향과 맛을 담은 와인&nbsp;&nbsp;&gt;</p>   
+                   </div>
+                  </div> 
+                </a>
+              <div class="wine-img" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="top-center">
                   <img src="image/wine-img.png" alt="Coffee">
               </div>
         </div>
-           <!-- <div class="wine-next-btn">
-             <a href="/">
-              <img src="image/next.png" alt="Next Button">
-             </a>
-           </div>  -->
       </div>
    </section>
 
@@ -108,9 +117,6 @@
                 온라인몰 바로가기 &nbsp;&nbsp;&gt;
             </a>
         </div>
-        <div class="online-store-img">
-            <img src="image/wave.png" alt="">
-        </div>
     </div>
    </section>
       <!-- 온라인 스토어 end -->
@@ -122,6 +128,9 @@
             style: 'flat',
             spacing: -0.25
         });
-    </script>    
+    </script>
+      <!-- 커피 & 와인 이미지 Fade In script -->
+    
+    <script>AOS.init();</script>
 </body>
 </html>
